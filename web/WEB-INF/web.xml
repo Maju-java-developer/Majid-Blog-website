@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <error-page>
+        <error-code>404</error-code>
+        <location>/error_page404.jsp</location>
+    </error-page>
+    <servlet>
+        <servlet-name>AddPostServlet</servlet-name>
+        <servlet-class>servlets.AddPostServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AddLikeServlet</servlet-name>
+        <servlet-class>servlets.AddLikeServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AddCommentServlet</servlet-name>
+        <servlet-class>servlets.AddCommentServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>FeedbackServlet</servlet-name>
+        <servlet-class>servlets.FeedbackServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EditServlet</servlet-name>
+        <url-pattern>/EditServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddPostServlet</servlet-name>
+        <url-pattern>/AddPostServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddLikeServlet</servlet-name>
+        <url-pattern>/AddLikeServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddCommentServlet</servlet-name>
+        <url-pattern>/AddCommentServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>FeedbackServlet</servlet-name>
+        <url-pattern>/FeedbackServlet</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <!--Welcome file path-->
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+    <!--Welcome file path-->
+    <!-- Servlet -->
+    <!--Register Servlet -->
+    <servlet>
+        <servlet-name>registerServlet</servlet-name>
+        <servlet-class>servlets.RegisterServlet</servlet-class>
+    </servlet>
+    <!--Login Servlet-->
+    <servlet>
+        <servlet-name>loginServlet</servlet-name>
+        <servlet-class>servlets.LoginServlet</servlet-class>
+    </servlet>
+    <!-- Servlet Mapping -->
+    <!--Register Servlet Mapping-->
+    <servlet>
+        <servlet-name>EditServlet</servlet-name>
+        <servlet-class>servlets.EditServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>registerServlet</servlet-name>
+        <url-pattern>/RegisterServlet</url-pattern>
+    </servlet-mapping>
+    <!--Login Servlet Mapping-->
+    <servlet-mapping>
+        <servlet-name>loginServlet</servlet-name>
+        <url-pattern>/loginServlet</url-pattern>
+    </servlet-mapping>
+</web-app>
